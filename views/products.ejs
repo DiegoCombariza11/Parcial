@@ -3,13 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Productos</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Document</title>
 </head>
 <body>
     <div class="container">
         <%-include ('templates/header.ejs')%>  
-        <table class="table table-striped">
+        <table>
             <thead>
                 <tr>
                     <th>Código</th>
@@ -26,15 +25,14 @@
                         <td><%= product.description %></td>
                         <td><%= product.stock %></td>
                         <td><%= product.value %></td>
-                        <td><%= product['sotck-min'] %></td>
+                        <td><%= product['stock-min'] %></td>
                     </tr>
                 <% }); %>
             </tbody>
         </table>
+
     </div>
-    <button id="addProductButton1" onclick="addProductToSale(products[0])" class="btn btn-primary">Agregar al carrito</button>
-    
+
     <script src="../public/index.js"></script>
-    <%- include("templates\\footer.ejs") %>
 </body>
 </html>
