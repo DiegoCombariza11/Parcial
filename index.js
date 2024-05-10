@@ -13,7 +13,7 @@ app.set('view engine', 'ejs');
 app.set('PORT', process.env.PORT || 3000);
 
 
-app.use(express.static('public/scripts'));
+app.use(express.static('public/index.js'));
 
 app.get('/checkout', function(req, res) {
     res.render('checkout');
