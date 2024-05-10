@@ -17,6 +17,7 @@
                     <th>Stock</th>
                     <th>Valor</th>
                     <th>Stock Mínimo</th>
+                    <th></th> <!-- botones-->
                 </tr>
             </thead>
             <tbody>
@@ -27,12 +28,13 @@
                         <td><%= product.stock %></td>
                         <td><%= product.value %></td>
                         <td><%= product['sotck-min'] %></td>
+                        <td><button onclick="addProductToSale('<%= JSON.stringify(product) %>')" class="btn btn-primary">Agregar al carrito</button></td>
                     </tr>
                 <% }); %>
             </tbody>
         </table>
     </div>
-    <button id="addProductButton1" onclick="addProductToSale(products[0])" class="btn btn-primary">Agregar al carrito</button>
+    <button id="checkout-button" class="btn btn-primary">Finalizar Compra</button>
     
     <script src="../public/index.js"></script>
     <%- include("templates\\footer.ejs") %>

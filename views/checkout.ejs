@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Checkout</title>
+</head>
+<body>
+    <h1>Checkout</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Código</th>
+                <th>Descripción</th>
+                <th>Valor</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% cart.forEach(product => { %>
+                <tr>
+                    <td><%= product.code %></td>
+                    <td><%= product.description %></td>
+                    <td><%= product.value %></td>
+                </tr>
+            <% }); %>
+        </tbody>
+    </table>
+    <script src="../public/index.js"></script>
+</body>
+</html>

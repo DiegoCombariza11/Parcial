@@ -10,9 +10,9 @@ router.get('/', (req, res) => {
     res.render('index', { data: productsArray });
 });
 
-router.get('/products', (req, res) => {
-    const data = JSON.parse(fs.readFileSync('data.json', 'utf8'));
-    res.render('products', { data });
+router.get('/checkout', (req, res) => {
+    const data = JSON.parse(fs.readFileSync('./resources/data.json', 'utf8'));
+    res.render('checkout', { data });
 });
 
 module.exports = router;
